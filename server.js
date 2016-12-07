@@ -6,7 +6,7 @@ var router =  express.Router();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-var port = process.env.port || 8080;
+var port = process.env.PORT || 8080;
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://dbaccess:dbaccess@ds119608.mlab.com:19608/heroku_n08k67hr');
