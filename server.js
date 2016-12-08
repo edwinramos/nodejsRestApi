@@ -19,8 +19,8 @@ router.get('/', function(req, res){
 
 router.post('/contacts', function(req, res){
     var contact = new Contact();
-    contact.name = req.body.Name;
-    contact.lastName = req.body.LastName;
+    contact.name = req.body.name;
+    contact.lastName = req.body.lastName;
 
     contact.save(function(err){
         if(err)
