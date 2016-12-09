@@ -39,7 +39,7 @@ router.get('/contacts', function(req, res){
     });
 });
 
-router.get('/contacts/:_id', function(req, res){
+router.get('/contact/:_id', function(req, res){
     Contact.find({_id: req.params['_id']}, function(err, result){
         if(err)
             res.send(err);
@@ -48,7 +48,7 @@ router.get('/contacts/:_id', function(req, res){
     });
 });
 
-router.put('/contacts/:_id', function(req, res){
+router.put('/contact/:_id', function(req, res){
     Contact.update({_id: req.params['_id']}, req.body, function (err, result) {
         if (err) {
             res.send(err);
@@ -57,7 +57,7 @@ router.put('/contacts/:_id', function(req, res){
     });
 });
 
-router.delete('/contacts/:_id', function(req, res){
+router.delete('/contact/:_id', function(req, res){
 
     Contact.remove({_id: req.params['_id']}, function (err, result) {
         if (err) {
